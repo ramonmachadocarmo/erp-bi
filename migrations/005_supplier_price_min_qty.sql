@@ -1,0 +1,1 @@
+ALTER TABLE supplier_prices ADD COLUMN min_qty NUMERIC(15,4) NOT NULL DEFAULT 1;

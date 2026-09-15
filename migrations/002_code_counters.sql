@@ -1,0 +1,4 @@
+CREATE TABLE code_counters (
+    name TEXT PRIMARY KEY,
+    n BIGINT NOT NULL DEFAULT 0
+);
