@@ -48,7 +48,7 @@ func main() {
 		stockclient.New(cfg.StockBaseURL),
 		purchasingclient.New(cfg.PurchasingBaseURL),
 		postgres.NewSequence(pool, "budget"),
-	)
+	).WithScenarios(pgadapter.Scenarios{Repo: repo})
 
 	go application.RunScheduler(ctx, svc, 60*time.Second)
 

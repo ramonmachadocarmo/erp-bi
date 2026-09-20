@@ -52,6 +52,7 @@ func (h *Handler) Register(r *gin.Engine, jwt gin.HandlerFunc) {
 	api.PUT("/schedules/:id", h.updateSchedule)
 	api.DELETE("/schedules/:id", h.deleteSchedule)
 	api.POST("/schedules/:id/run-now", h.runScheduleNow)
+	h.registerScenarios(api)
 }
 
 func (h *Handler) withAuth(c *gin.Context) context.Context {

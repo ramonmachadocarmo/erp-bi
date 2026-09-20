@@ -19,6 +19,7 @@ type Service struct {
 	catalog        domain.Catalog
 	purchasing     domain.Purchasing
 	budgetSeq      codes.Sequence
+	scenarios      domain.ScenarioRepository
 }
 
 func New(
